@@ -1,2 +1,7 @@
-package com.example.springbootdesignpatternexample.model.Iterator;public class Iterator {
+package com.example.springbootdesignpatternexample.model.Iterator;
+
+public interface Iterator {
+    boolean hasNext();
+
+    Object next();
 }

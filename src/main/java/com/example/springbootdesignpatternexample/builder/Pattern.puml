@@ -1,0 +1,24 @@
+@startuml
+
+interface Builder {
+ +builderStepA()
+ +builderStepB()
+ +getProduct(): Product
+}
+
+class ConcreteBuilderA implements Builder {
+ +builderStepA()
+ +builderStepB()
+ +getProduct(): Product
+}
+
+class Director {
+ -builder: Builder
+ +Director(Builder)
+ +construct()
+}
+
+Director -left-* Builder
+Client -left-* Director
+
+@enduml
