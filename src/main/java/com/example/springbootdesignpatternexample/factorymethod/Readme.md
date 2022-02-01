@@ -1,4 +1,4 @@
-# Factory Method 패턴
+# [객체생성과 관련된 디자인패턴] Factory Method 패턴
 
 - 구체적으로 어떤 인스턴스를 만들지는 서브클래스가 정한다.
 - Open-Closed Principle 에 따라서 확장을하게됐을 때, 코드의 변화는 없게끔 만들어 줘야한다.
