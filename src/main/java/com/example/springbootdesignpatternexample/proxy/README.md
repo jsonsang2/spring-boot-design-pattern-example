@@ -12,18 +12,21 @@
 
 ### 장점
 
-- 애플리케이션에서 사용하는 메모리를 줄일 수 있다.
+- 기존 코드를 변경하지 않고 새로운 기능을 추가할 수 있다.(OCP)
+- 기존 코드가 해야하는 일만 유지할 수 있다.(SRP)
+- 기능 추가 및 초기화 지연 등으로 다양하게 활용할 수 있다.
 
 ### 단점
 
-- 복잡도가 증가해서 Facade pattern에 대한 사전지식이 없을 경우에 코드에 대한 이해가 어려워질 수 있다.
+- 코드의 복잡도가 증가한다.
 
 ## 실무
 
-도메인 관련해서 메모리를 최적화하기 윈한 패턴이라 찾기가 쉽지는 않다.
+### Java Dynamic Proxy
 
-### Java valueOf
+- Reflection을 이용한 Dynamic Proxy
 
-> Cache to support the object identity semantics of autoboxing for values between -128 and 127 (inclusive) as required by JLS. The cache is initialized on first usage. The size of the cache may be controlled by the {@code -XX:AutoBoxCacheMax=<size>} option. During VM initialization, java.lang.Integer.IntegerCache.high property may be set and saved in the private system properties in the jdk.internal.misc.VM class.
+### Spring AOP
 
-- Java Integer의 valueOf는 특정 범위의 숫자를 캐싱해서 사용한다.
+- Java Dynamic Proxy를 이용해서 Proxy Bean을 만들어준다.
+- @Transactional, @Cacheable 등이 포함된다.
