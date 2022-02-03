@@ -1,0 +1,24 @@
+@startuml
+
+interface List {
+ +templateMethod()
+ +createProduct(): Product
+}
+
+class ConcreteCreator {
+ +createProduct(): Product
+}
+
+interface Product {
+}
+
+class ConcreteProduct{
+}
+
+
+List -right-* Product : use
+ConcreteCreator -up-|> List
+ConcreteProduct -up-|> Product
+
+
+@enduml
