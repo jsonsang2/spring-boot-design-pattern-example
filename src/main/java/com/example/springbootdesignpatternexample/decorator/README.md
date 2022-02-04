@@ -31,3 +31,7 @@
 ### Spring Framework
 
 - ServerHttpRequestDecorator : 요청에서 로깅할 부분이나, 차단할부분 등에 대해서 데코레이터로 만들 수 있다.
+
+### Fraud Detection
+
+- Fraud Rule들을 Rule Flag 별, 국가별로 조합해서 켜야되는데 이를 데코레이터 패턴으로 동적으로 적용
